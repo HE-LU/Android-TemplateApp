@@ -4,8 +4,8 @@ import java.io.FileInputStream
 import java.util.*
 
 object Signing {
-    private val keystore_properties = "extras/keystore/mobile-template-app.properties"
-    private val keystore_file = "extras/keystore/mobile-template-app.keystore"
+    private val keystore_properties = "extras/keystore/template-app.properties"
+    private val keystore_file = "extras/keystore/template-app.keystore"
 
     data class ReleaseValues(
         val storeFilePath: String,
