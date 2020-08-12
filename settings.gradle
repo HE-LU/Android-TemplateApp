@@ -1,0 +1,2 @@
+include ':mobile-template-app'
+rootProject.name = "TemplateApp"
