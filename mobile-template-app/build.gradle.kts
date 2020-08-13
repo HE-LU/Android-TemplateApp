@@ -13,18 +13,6 @@ android {
         dataBinding = true
     }
 
-    // Subtitle: Flavors and build types
-    flavorDimensions("base")
-
-    productFlavors {
-        create("develop") {
-            buildConfigField("boolean", "DEV_ENVIRONMENT", "true")
-        }
-        create("production") {
-            buildConfigField("boolean", "DEV_ENVIRONMENT", "false")
-        }
-    }
-
     buildTypes {
         getByName("debug") {
             buildConfigField("boolean", "LOGS", "true")
@@ -48,6 +36,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":core"))
+
     // Title: AndroidX
     implementation(AndroidX.LIFECYCLE_RUNTIME)
     implementation(AndroidX.LIFECYCLE_EXTENSIONS)

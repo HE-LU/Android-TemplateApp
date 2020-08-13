@@ -12,6 +12,7 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
+import org.gradle.kotlin.dsl.get
 import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.plugin.KaptExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
@@ -109,6 +110,27 @@ class CommonBinaryPlugin : Plugin<Project> {
             dexOptions {
                 preDexLibraries = true
                 maxProcessCount = 8
+            }
+
+            // Subtitle: Set Kotlin sourceSets
+            sourceSets["main"].java.srcDir("src/main/kotlin")
+
+            // Subtitle: Flavors and build types
+            flavorDimensions("env")
+
+            productFlavors {
+                create("develop") {
+                    dimension = "env"
+                    buildConfigField("boolean", "DEV_ENVIRONMENT", "true")
+                }
+                create("staging") {
+                    dimension = "env"
+                    buildConfigField("boolean", "DEV_ENVIRONMENT", "false")
+                }
+                create("production") {
+                    dimension = "env"
+                    buildConfigField("boolean", "DEV_ENVIRONMENT", "false")
+                }
             }
         }
     }
