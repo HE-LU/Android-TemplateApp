@@ -12,6 +12,7 @@ class LiveBus {
     private val eventMap: MutableMap<Class<out Event>, LiveEvent<out Event>> = ArrayMap()
 
     fun <T : Event> observe(owner: LifecycleOwner, eventClass: Class<T>, observer: Observer<T>) {
+        @Suppress("UNCHECKED_CAST")
         val liveEvent = eventMap.getOrPut(eventClass) { LiveEvent<T>() } as LiveEvent<T>
 
         liveEvent.observeEvents(owner, observer)

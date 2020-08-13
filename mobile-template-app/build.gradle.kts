@@ -1,6 +1,7 @@
 plugins {
     id("io.gitlab.arturbosch.detekt").version(Detekt.VERSION)
     id("com.android.application")
+    id("dagger.hilt.android.plugin")
     id("common-binary-plugin")
 }
 
@@ -44,6 +45,10 @@ dependencies {
     implementation(AndroidX.LIFECYCLE_VIEWMODEL)
     implementation(AndroidX.LIFECYCLE_LIVEDATA)
     kapt(AndroidX.LIFECYCLE_COMPILER)
+
+    // Title: Hilt
+    implementation(Hilt.HILT_ANDROID)
+    kapt(Hilt.HILT_COMPILER)
 
     // Title: Retrofit
     implementation(Retrofit.OKHTTP)

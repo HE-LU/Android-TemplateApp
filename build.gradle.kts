@@ -8,6 +8,7 @@ buildscript {
         classpath(Gradle.GRADLE_PLUGIN)
         classpath(Kotlin.KOTLIN_PLUGIN)
         classpath(Ktlint.KTLINT_PLUGIN)
+        classpath(Hilt.HILT_PLUGIN)
     }
 }
 
