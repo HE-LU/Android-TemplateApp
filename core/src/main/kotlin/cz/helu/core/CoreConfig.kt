@@ -1,6 +1,4 @@
-package com.cinnamon.core
-
-import cz.helu.core.BuildConfig
+package cz.helu.core
 
 private const val FLAVOR_PRODUCTION = "production"
 private const val FLAVOR_STAGING = "staging"
@@ -16,6 +14,8 @@ object CoreConfig {
 
     const val DEBUG_BUILD_TYPE = BuildConfig.BUILD_TYPE == BUILD_TYPE_DEBUG
     const val RELEASE_BUILD_TYPE = BuildConfig.BUILD_TYPE == BUILD_TYPE_RELEASE
+
+    const val APP_TAG = "TemplateApp"
 
     object Url {
         const val TERMS_OF_SERVICE = "https://www.helu.cz"
