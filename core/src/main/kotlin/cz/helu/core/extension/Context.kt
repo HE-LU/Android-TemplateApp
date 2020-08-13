@@ -6,6 +6,7 @@ import android.app.Application
 import android.app.NotificationManager
 import android.content.Context
 import android.provider.Settings
+import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.FragmentActivity
 
 /**
@@ -32,3 +33,6 @@ fun Context?.isAvailable(): Boolean {
 fun Context.deviceID(): String = Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID) ?: "NoAndroidId"
 
 val Context.notificationManager: NotificationManager get() = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+
+inline val Context.inputMethodManager: InputMethodManager
+    get() = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
