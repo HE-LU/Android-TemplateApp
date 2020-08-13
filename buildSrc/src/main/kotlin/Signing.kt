@@ -1,7 +1,7 @@
 import org.gradle.api.Project
 import java.io.File
 import java.io.FileInputStream
-import java.util.*
+import java.util.Properties
 
 object Signing {
     private val keystore_properties = "extras/keystore/template-app.properties"

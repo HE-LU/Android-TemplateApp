@@ -94,13 +94,15 @@ private inline fun <T> SharedPreferencesProvider.delegate(
         override fun getValue(thisRef: Any?, property: KProperty<*>): T? =
             prefs.getter(
                 key
-                    ?: property.name, defaultValue
+                    ?: property.name,
+                defaultValue
             )
 
         override fun setValue(thisRef: Any?, property: KProperty<*>, value: T?) =
             prefs.edit().setter(
                 key
-                    ?: property.name, value
+                    ?: property.name,
+                value
             ).apply()
     }
 
@@ -114,13 +116,15 @@ private inline fun <T> SharedPreferencesProvider.delegatePrimitive(
         override fun getValue(thisRef: Any?, property: KProperty<*>): T =
             prefs.getter(
                 key
-                    ?: property.name, defaultValue
+                    ?: property.name,
+                defaultValue
             )!!
 
         override fun setValue(thisRef: Any?, property: KProperty<*>, value: T) =
             prefs.edit().setter(
                 key
-                    ?: property.name, value
+                    ?: property.name,
+                value
             ).apply()
     }
 
@@ -130,8 +134,10 @@ private inline fun <T> SharedPreferencesProvider.liveDataDelegate(
     crossinline getter: SharedPreferences.(String, T?) -> T?,
     crossinline setter: Editor.(String, T?) -> Editor
 ): ReadOnlyProperty<Any?, MutableLiveData<T?>> =
-    object : MutableLiveData<T?>(), ReadOnlyProperty<Any?, MutableLiveData<T?>>,
-             SharedPreferences.OnSharedPreferenceChangeListener {
+    object :
+        MutableLiveData<T?>(),
+        ReadOnlyProperty<Any?, MutableLiveData<T?>>,
+        SharedPreferences.OnSharedPreferenceChangeListener {
         var originalProperty: KProperty<*>? = null
         lateinit var prefKey: String
 
@@ -178,8 +184,10 @@ private inline fun <T> SharedPreferencesProvider.liveDataDelegatePrimitive(
     crossinline getter: SharedPreferences.(String, T) -> T,
     crossinline setter: Editor.(String, T) -> Editor
 ): ReadOnlyProperty<Any?, MutableLiveData<T>> =
-    object : MutableLiveData<T>(), ReadOnlyProperty<Any?, MutableLiveData<T>>,
-             SharedPreferences.OnSharedPreferenceChangeListener {
+    object :
+        MutableLiveData<T>(),
+        ReadOnlyProperty<Any?, MutableLiveData<T>>,
+        SharedPreferences.OnSharedPreferenceChangeListener {
         var originalProperty: KProperty<*>? = null
         lateinit var prefKey: String
 

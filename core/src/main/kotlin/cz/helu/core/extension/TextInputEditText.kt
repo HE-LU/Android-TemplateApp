@@ -6,7 +6,7 @@ import com.google.android.material.textfield.TextInputEditText
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
 
-//@OptIn(ExperimentalCoroutinesApi::class)
+// @OptIn(ExperimentalCoroutinesApi::class)
 fun TextInputEditText.textInputAsFlow() = callbackFlow {
     val watcher: TextWatcher = doOnTextChanged { textInput: CharSequence?, _, _, _ ->
         offer(textInput)

@@ -5,7 +5,7 @@ import timber.log.Timber
 import java.net.ConnectException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
-import java.util.*
+import java.util.Locale
 
 private const val CALL_STACK_INDEX = 5
 
