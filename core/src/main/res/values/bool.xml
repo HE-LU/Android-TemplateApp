@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <bool name="windowLightStatusBarDefault">true</bool>
+    <bool name="windowLightStatusBarLauncher">false</bool>
+
+    <bool name="windowLightNavigationBarDefault">true</bool>
+    <bool name="windowLightNavigationBarLauncher">false</bool>
+
+</resources>

@@ -15,6 +15,5 @@
             layout="@layout/layout_toolbar" />
 
     </com.google.android.material.appbar.AppBarLayout>
-
 </layout>
 
