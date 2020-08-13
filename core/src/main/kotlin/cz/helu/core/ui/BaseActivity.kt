@@ -64,6 +64,7 @@ abstract class BaseActivity(
 
     internal open fun setupView() {
         setContentView(layoutResId)
+        setSupportActionBar(toolbar)
     }
 
     fun showToolbarMenu(@MenuRes resource: Int, action: Menu.() -> Unit) {

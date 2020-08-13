@@ -1,32 +1,12 @@
 package cz.helu.templateapp.ui.dashboard
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
+import cz.helu.core.arch.BaseFragmentViewModel
 import cz.helu.templateapp.R
+import cz.helu.templateapp.databinding.FragmentDashboardBinding
 
-class DashboardFragment : Fragment() {
-    private lateinit var dashboardViewModel: DashboardViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        dashboardViewModel = ViewModelProvider(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(
-            viewLifecycleOwner,
-            Observer {
-                textView.text = it
-            }
-        )
-        return root
-    }
+class DashboardFragment :
+    BaseFragmentViewModel<DashboardViewModel, FragmentDashboardBinding>(R.layout.fragment_dashboard) {
+    override val logTag: String = DashboardFragment::class.java.name
+    override val viewModel: DashboardViewModel by viewModels()
 }
