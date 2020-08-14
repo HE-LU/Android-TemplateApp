@@ -10,7 +10,6 @@ import cz.helu.core.ui.BaseUIScreen
 
 @SuppressWarnings("VariableNaming")
 abstract class BaseFragment : Fragment(), BaseUIScreen {
-    abstract val logTag: String
 
     override val baseActivity: BaseActivity
         get() = activity as? BaseActivity ?: throw IllegalStateException("No activity in this fragment")

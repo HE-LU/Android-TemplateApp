@@ -7,6 +7,5 @@ import cz.helu.templateapp.databinding.FragmentDashboardBinding
 
 class DashboardFragment :
     BaseViewModelFragment<DashboardViewModel, FragmentDashboardBinding>(R.layout.fragment_dashboard) {
-    override val logTag: String = DashboardFragment::class.java.name
     override val viewModel: DashboardViewModel by viewModels()
 }

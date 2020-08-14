@@ -7,6 +7,5 @@ import cz.helu.debugtools.databinding.FragmentDebugToolsBinding
 
 class DebugToolsFragment :
     BaseViewModelFragment<DebugToolsViewModel, FragmentDebugToolsBinding>(R.layout.fragment_debug_tools) {
-    override val logTag: String = DebugToolsFragment::class.java.name
     override val viewModel: DebugToolsViewModel by viewModels()
 }
