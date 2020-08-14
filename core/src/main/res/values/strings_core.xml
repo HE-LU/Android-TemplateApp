@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App Error -->
+    <string name="error_general">Something went wrong, please try again later.</string>
+    <string name="error_general_action_snack">Something went wrong</string>
+    <string name="error_no_internet">No internet connection, please try again later.</string>
+    <string name="error_no_internet_action_snack">No internet connection</string>
+
+</resources>

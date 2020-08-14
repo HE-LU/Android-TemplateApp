@@ -1,29 +1,12 @@
 package cz.helu.templateapp.ui.notifications
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
+import cz.helu.core.arch.BaseViewModelFragment
 import cz.helu.templateapp.R
+import cz.helu.templateapp.databinding.FragmentNotificationsBinding
 
-class NotificationsFragment : Fragment() {
-    private lateinit var notificationsViewModel: NotificationsViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        notificationsViewModel = ViewModelProvider(this).get(NotificationsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
-        val textView: TextView = root.findViewById(R.id.text_notifications)
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
-    }
+class NotificationsFragment :
+    BaseViewModelFragment<NotificationsViewModel, FragmentNotificationsBinding>(R.layout.fragment_notifications) {
+    override val logTag: String = NotificationsFragment::class.java.name
+    override val viewModel: NotificationsViewModel by viewModels()
 }

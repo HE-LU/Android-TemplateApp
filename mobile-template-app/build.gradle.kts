@@ -1,6 +1,7 @@
 plugins {
     id("io.gitlab.arturbosch.detekt").version(Detekt.VERSION)
     id("com.android.application")
+    id("dagger.hilt.android.plugin")
     id("common-binary-plugin")
 }
 
@@ -11,18 +12,6 @@ android {
 
     buildFeatures {
         dataBinding = true
-    }
-
-    // Subtitle: Flavors and build types
-    flavorDimensions("base")
-
-    productFlavors {
-        create("develop") {
-            buildConfigField("boolean", "DEV_ENVIRONMENT", "true")
-        }
-        create("production") {
-            buildConfigField("boolean", "DEV_ENVIRONMENT", "false")
-        }
     }
 
     buildTypes {
@@ -48,12 +37,18 @@ android {
 }
 
 dependencies {
+    implementation(project(":core"))
+
     // Title: AndroidX
     implementation(AndroidX.LIFECYCLE_RUNTIME)
     implementation(AndroidX.LIFECYCLE_EXTENSIONS)
     implementation(AndroidX.LIFECYCLE_VIEWMODEL)
     implementation(AndroidX.LIFECYCLE_LIVEDATA)
     kapt(AndroidX.LIFECYCLE_COMPILER)
+
+    // Title: Hilt
+    implementation(Hilt.HILT_ANDROID)
+    kapt(Hilt.HILT_COMPILER)
 
     // Title: Retrofit
     implementation(Retrofit.OKHTTP)

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- LIGHT COLOR THEME -->
+
+    <!-- colorPrimary colors map to components and elements, such as app bars and buttons. -->
+    <!-- colorSecondary colors are most often used as accents on components, such as FABs and selection controls. -->
+    <color name="color_primary">#2196F3</color>
+    <color name="color_secondary">#1565C0</color>
+
+    <!-- colorBackground appears behind scrollable content and is used for the default window background. -->
+    <!-- colorSurface is mapped to the surface of components such as cards, sheets and menus. -->
+    <!-- colorError is used to indicate an error state for components such as text fields. -->
+    <color name="color_background">#ffffff</color>
+    <color name="color_surface">#ffffff</color>
+    <color name="color_error">#b00020</color>
+
+    <!--"On" colors define how text, icons and strokes are colored in relation to the surface on which they appear. -->
+    <color name="color_on_primary">#ffffff</color>
+    <color name="color_on_secondary">#ffffff</color>
+    <color name="color_on_background">#000000</color>
+    <color name="color_on_surface">#000000</color>
+    <color name="color_on_surface_secondary">#515152</color>
+    <color name="color_on_surface_tertiary">#AEAEB2</color>
+    <color name="color_on_error">#ffffff</color>
+    <color name="color_hint">#AEAEB2</color>
+    <color name="color_status_bar">#D3D3D3</color>
+    <color name="color_navigation_bar">#D3D3D3</color>
+    <color name="color_navigation_bar_black">#000000</color>
+    <color name="color_navigation_bar_bottom_sheet">#D3D3D3</color>
+    <color name="color_bottomsheet_surface">#FFFFFF</color>
+    <color name="color_bottomsheet_progress_overlay">#BFFFFFFF</color>
+    <color name="color_text_input_box_bg">#F2F2F7</color>
+    <color name="color_text_input_box_stroke">#E5E5EA</color>
+
+    <color name="color_highlight">#33000000</color>
+
+    <color name="bg_launch_screen">#000000</color>
+
+    <color name="color_snackbar_text">#ffffff</color>
+    <color name="color_snackbar_bg">#B32C2D2E</color>
+    <color name="color_tab_text">#636366</color>
+
+</resources>

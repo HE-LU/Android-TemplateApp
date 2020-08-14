@@ -52,6 +52,16 @@ object Kotlin {
     const val CORUTINES_ANDROID = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$CORUTINES_VERSION"
 }
 
+object Hilt {
+    // Subtitle: Versions
+    const val HILT_VERSION = "2.28-alpha"
+
+    // Subtitle: Dfinitions
+    const val HILT_PLUGIN = "com.google.dagger:hilt-android-gradle-plugin:$HILT_VERSION"
+    const val HILT_ANDROID = "com.google.dagger:hilt-android:$HILT_VERSION"
+    const val HILT_COMPILER = "com.google.dagger:hilt-android-compiler:$HILT_VERSION"
+}
+
 object Retrofit {
     // Subtitle: Versions
     const val OKHTTP_VERSION = "4.8.1"
