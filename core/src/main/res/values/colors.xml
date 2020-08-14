@@ -34,7 +34,7 @@
 
     <color name="color_highlight">#33000000</color>
 
-    <color name="bg_launch_screen">#000000</color>
+    <color name="bg_launch_screen">#ffffff</color>
 
     <color name="color_snackbar_text">#ffffff</color>
     <color name="color_snackbar_bg">#B32C2D2E</color>
