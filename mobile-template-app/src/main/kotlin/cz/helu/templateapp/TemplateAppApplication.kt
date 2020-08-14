@@ -4,15 +4,19 @@ import android.app.Application
 import cz.helu.core.CoreConfig
 import cz.helu.core.logging.timber.CrashReportingTree
 import cz.helu.core.logging.timber.TimberDebugTree
+import cz.helu.templateapp.util.ActivityLifecycleLoggerCallbacks
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 
 @HiltAndroidApp
 class TemplateAppApplication : Application() {
+
     override fun onCreate() {
         super.onCreate()
 
         initTimber()
+
+        registerLifecycleTracking()
     }
 
     @Suppress("ConstantConditionIf")
@@ -29,5 +33,11 @@ class TemplateAppApplication : Application() {
             // Log to console for debug builds
             Timber.plant(TimberDebugTree())
         }
+    }
+
+    private fun registerLifecycleTracking() {
+        registerActivityLifecycleCallbacks(ActivityLifecycleLoggerCallbacks { tag, method ->
+            Timber.tag(tag).v(method)
+        })
     }
 }

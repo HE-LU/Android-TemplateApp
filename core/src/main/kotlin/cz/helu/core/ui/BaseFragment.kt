@@ -1,14 +1,12 @@
 package cz.helu.core.arch
 
 import android.os.Bundle
-import android.view.View
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.google.android.material.snackbar.Snackbar
 import cz.helu.core.extension.instantiateFragment
 import cz.helu.core.ui.BaseUIScreen
-import timber.log.Timber
 
 @SuppressWarnings("VariableNaming")
 abstract class BaseFragment : Fragment(), BaseUIScreen {
@@ -22,24 +20,12 @@ abstract class BaseFragment : Fragment(), BaseUIScreen {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Timber.d(logTag)
         setHasOptionsMenu(true)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        Timber.d(logTag)
     }
 
     override fun onDestroyView() {
         dismissLastSnackbar()
         super.onDestroyView()
-        Timber.d(logTag)
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Timber.d(logTag)
     }
 
     /**

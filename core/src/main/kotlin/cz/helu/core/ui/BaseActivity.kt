@@ -37,8 +37,6 @@ abstract class BaseActivity(
     private val toolbar get() = findViewById<Toolbar?>(R.id.toolbar)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Timber.v(this.javaClass.name)
-
         super.onCreate(savedInstanceState)
 
         setupView()
@@ -51,8 +49,6 @@ abstract class BaseActivity(
     }
 
     override fun onDestroy() {
-        Timber.v(this.javaClass.name)
-
         dismissLastSnackbar()
 
         super.onDestroy()
