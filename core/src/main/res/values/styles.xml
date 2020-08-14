@@ -74,30 +74,21 @@
         <item name="shapeAppearance">@style/ShapeAppearance.TemplateApp.Rounded</item>
     </style>
 
-    <!-- CarView -->
+    <!-- Title: CarView -->
     <style name="Widget.TemplateApp.CardView" parent="Widget.MaterialComponents.CardView">
         <item name="cardBackgroundColor">?colorSurface</item>
         <item name="cardCornerRadius">12dp</item>
         <item name="cardElevation">1dp</item>
     </style>
 
-    <!-- ProgressBar -->
-    <!-- 	<style name="Widget.TemplateApp.ProgressBar" -->
-    <!-- 		parent="Widget.AppCompat.ProgressBar"> -->
-    <!-- 		<item name="android:minWidth">48dp</item> -->
-    <!-- 		<item name="android:minHeight">48dp</item> -->
-    <!-- 		<item name="android:indeterminateDuration">2000</item> -->
-    <!-- 		<item name="android:indeterminateDrawable">@drawable/shape_progress</item> -->
-    <!-- 	</style> -->
-
-    <!-- Floating action button -->
+    <!-- Title: Floating action button -->
     <style name="Widget.TemplateApp.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
         <item name="backgroundTint">?android:colorBackground</item>
         <item name="tint">?colorPrimary</item>
         <item name="rippleColor">@color/color_highlight</item>
     </style>
 
-    <!--  TextInputLayout  -->
+    <!-- Title: TextInputLayout -->
     <style name="Widget.TemplateApp.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="boxBackgroundColor">@color/color_text_input_box_bg</item>
         <item name="boxStrokeWidth">1dp</item>
@@ -106,7 +97,7 @@
         <item name="hintEnabled">false</item>
     </style>
 
-    <!--  Snackbar  -->
+    <!-- Title: Snackbar -->
     <style name="Widget.TemplateApp.Snackbar" parent="@style/Widget.MaterialComponents.Snackbar">
         <item name="android:background">@color/color_snackbar_bg</item>
         <item name="actionTextColorAlpha">1.0</item>
@@ -127,9 +118,7 @@
         <item name="android:textAlignment">center</item>
     </style>
 
-    <!-- Theme Overlays -->
-
-    <!-- Dialog -->
+    <!-- Title: Dialog -->
     <style name="Widget.TemplateApp.Dialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
         <item name="colorSurface">@color/color_surface</item>
         <item name="buttonBarPositiveButtonStyle">@style/Widget.TemplateApp.Dialog.Button.Positive</item>
@@ -169,7 +158,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <!-- TabLayout -->
+    <!-- Title: TabLayout -->
     <style name="Widget.TemplateApp.TabLayout" parent="Widget.MaterialComponents.TabLayout">
         <item name="tabMode">auto</item>
         <item name="tabMaxWidth">0dp</item>
@@ -181,10 +170,10 @@
         <item name="tabRippleColor">@color/tab_bg_tint_list</item>
     </style>
 
-    <!-- BottomNavigationView -->
+    <!-- Title: BottomNavigationView -->
     <style name="Widget.TemplateApp.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView" />
 
-    <!-- Bottom Sheets -->
+    <!-- Title: Bottom Sheets -->
     <style name="ThemeOverlay.TemplateApp.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.Dialog">
         <item name="android:windowIsFloating">false</item>
         <item name="android:windowSoftInputMode">adjustNothing</item>
