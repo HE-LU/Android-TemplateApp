@@ -39,6 +39,8 @@ android {
 dependencies {
     implementation(project(":core"))
 
+    implementation(project(":feature-debug-tools"))
+
     // Title: AndroidX
     implementation(AndroidX.LIFECYCLE_RUNTIME)
     implementation(AndroidX.LIFECYCLE_EXTENSIONS)
@@ -54,11 +56,6 @@ dependencies {
     implementation(Retrofit.OKHTTP)
     implementation(Retrofit.OKHTTP_LOGGING_INTERCEPTOR)
     implementation(Retrofit.RETROFIT)
-
-    // Title: Glide
-    implementation(Glide.GLIDE)
-    implementation(Glide.GLIDE_OKHTTP3)
-    kapt(Glide.GLIDE_COMPILER)
 
     // Title: Others
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))

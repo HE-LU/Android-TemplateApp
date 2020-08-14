@@ -26,7 +26,6 @@ interface ViewModelBinder<V : BaseViewModel, B : ViewDataBinding> : LifecycleOwn
 
         resultBinding.apply {
             lifecycleOwner = getViewLifecycleOwner()
-            setVariable(BR.view, this@ViewModelBinder)
             setVariable(BR.viewModel, viewModel)
         }
 

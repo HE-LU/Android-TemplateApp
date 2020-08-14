@@ -6,9 +6,6 @@
 
     <data>
         <variable
-            name="view"
-            type="cz.helu.templateapp.ui.home.HomeFragment" />
-        <variable
             name="viewModel"
             type="cz.helu.templateapp.ui.home.HomeViewModel" />
     </data>
@@ -19,7 +16,7 @@
 
         <TextView
             android:id="@+id/text_home"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
