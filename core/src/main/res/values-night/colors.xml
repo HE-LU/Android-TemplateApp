@@ -14,7 +14,7 @@
     <color name="color_surface">#000000</color>
     <color name="color_error">#b00020</color>
 
-    <!--"On" colors define how text, icons and strokes are colored in relation to the surface on which they appear. -->
+    <!-- "On" colors define how text, icons and strokes are colored in relation to the surface on which they appear. -->
     <color name="color_on_primary">#000000</color>
     <color name="color_on_secondary">#000000</color>
     <color name="color_on_background">#ffffff</color>

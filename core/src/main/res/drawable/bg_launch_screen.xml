@@ -3,12 +3,12 @@
             android:opacity="opaque">
 
     <!-- The background color, preferably the same as your normal theme -->
-    <item android:drawable="@color/bg_launch_screen" />
+    <item android:drawable="@color/color_surface" />
 
     <!-- Your product logo - 144dp color version of your app icon -->
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/ic_launcher_foreground" />
+            android:src="@drawable/ic_splash" />
     </item>
 </layer-list>
