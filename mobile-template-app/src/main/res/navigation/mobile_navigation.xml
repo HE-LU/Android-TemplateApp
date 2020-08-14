@@ -22,4 +22,10 @@
         android:name="cz.helu.templateapp.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_debug_tools"
+        android:name="cz.helu.debugtools.ui.DebugToolsFragment"
+        android:label="@string/title_debug_tools"
+        tools:layout="@layout/fragment_debug_tools" />
 </navigation>

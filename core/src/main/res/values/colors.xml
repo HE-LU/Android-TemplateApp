@@ -37,5 +37,6 @@
     <color name="color_snackbar_text">#ffffff</color>
     <color name="color_snackbar_bg">#B32C2D2E</color>
     <color name="color_tab_text">#636366</color>
+    <color name="color_button_disabled">#E5E5EA</color>
 
 </resources>

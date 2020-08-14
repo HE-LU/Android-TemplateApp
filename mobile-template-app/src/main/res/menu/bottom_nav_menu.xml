@@ -16,4 +16,9 @@
         android:icon="@drawable/ic_notifications_black_24dp"
         android:title="@string/title_notifications" />
 
+    <item
+        android:id="@+id/navigation_debug_tools"
+        android:icon="@drawable/ic_debug_tools"
+        android:title="@string/title_debug_tools" />
+
 </menu>

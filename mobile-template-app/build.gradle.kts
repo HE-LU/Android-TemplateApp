@@ -39,6 +39,8 @@ android {
 dependencies {
     implementation(project(":core"))
 
+    implementation(project(":feature-debug-tools"))
+
     // Title: AndroidX
     implementation(AndroidX.LIFECYCLE_RUNTIME)
     implementation(AndroidX.LIFECYCLE_EXTENSIONS)
