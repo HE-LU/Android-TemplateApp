@@ -57,11 +57,6 @@ dependencies {
     implementation(Retrofit.OKHTTP_LOGGING_INTERCEPTOR)
     implementation(Retrofit.RETROFIT)
 
-    // Title: Glide
-    implementation(Glide.GLIDE)
-    implementation(Glide.GLIDE_OKHTTP3)
-    kapt(Glide.GLIDE_COMPILER)
-
     // Title: Others
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))
 }
