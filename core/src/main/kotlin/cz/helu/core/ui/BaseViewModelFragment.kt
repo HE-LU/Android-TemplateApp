@@ -8,7 +8,7 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.ViewDataBinding
 import cz.helu.core.ui.ViewModelBinder
 
-abstract class BaseFragmentViewModel<V : BaseViewModel, B : ViewDataBinding>(
+abstract class BaseViewModelFragment<V : BaseViewModel, B : ViewDataBinding>(
     @LayoutRes private val layoutResId: Int
 ) : BaseFragment(), ViewModelBinder<V, B> {
     private var _binding: B? = null
