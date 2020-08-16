@@ -1,5 +1,4 @@
 plugins {
-    id("io.gitlab.arturbosch.detekt").version(Detekt.VERSION)
     id("com.android.application")
     id("dagger.hilt.android.plugin")
     id("common-binary-plugin")
@@ -59,12 +58,6 @@ dependencies {
 
     // Title: Others
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))
-}
-
-// Title: Detekt init
-detekt {
-    config = files("${project.rootDir}/extras/detekt.yml")
-    parallel = true
 }
 
 // Title: Ktlint init
