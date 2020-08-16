@@ -28,7 +28,7 @@ import cz.helu.core.graphic.BlurTransformation
 import timber.log.Timber
 
 @BindingAdapter("src")
-@SuppressWarnings("TooGenericExceptionCaught")
+@Suppress("TooGenericExceptionCaught")
 fun ImageView.src(@DrawableRes drawableRes: Int?) {
     if (drawableRes != null && drawableRes != 0) {
         try {
@@ -40,7 +40,7 @@ fun ImageView.src(@DrawableRes drawableRes: Int?) {
 }
 
 @SuppressLint("CheckResult")
-@SuppressWarnings("LongParameterList", "ComplexMethod")
+@Suppress("LongParameterList", "ComplexMethod")
 @BindingAdapter(
     value = ["imageUrl", "imageCircular", "imageBlurred", "roundedCorners", "withTransition", "asGif", "imagePlaceholder", "imageError", "withErrorBackground", "isBlackAndWhite"],
     requireAll = false
@@ -117,6 +117,7 @@ fun ImageView.loadImage(
         placeholder.start()
 }
 
+@Suppress("LongParameterList")
 private fun setupGlideRequestListener(
     imageView: ImageView,
     image: GlideRequest<Drawable>,

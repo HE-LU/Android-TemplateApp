@@ -17,16 +17,15 @@ import androidx.fragment.app.FragmentActivity
  * + [Context] is not finishing (tested with [FragmentActivity.isFinishing] or [Activity.isFinishing])
  */
 fun Context?.isAvailable(): Boolean {
-    if (this == null) {
-        return false
+    return if (this == null) {
+        false
     } else if (this !is Application) {
         if (this is FragmentActivity) {
-            return !(this.isDestroyed || this.isFinishing)
+            !(this.isDestroyed || this.isFinishing)
         } else if (this is Activity) {
-            return !(this.isDestroyed || this.isFinishing)
-        }
-    }
-    return true
+            !(this.isDestroyed || this.isFinishing)
+        } else true
+    } else true
 }
 
 @SuppressLint("HardwareIds")

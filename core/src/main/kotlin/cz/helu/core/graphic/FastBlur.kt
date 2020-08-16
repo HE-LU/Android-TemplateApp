@@ -20,6 +20,7 @@ import android.graphics.Bitmap
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+@Suppress("LongMethod", "ComplexMethod")
 object FastBlur {
     @JvmStatic
     fun blur(sentBitmap: Bitmap, radius: Int, canReuseInBitmap: Boolean): Bitmap? {

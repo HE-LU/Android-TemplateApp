@@ -11,7 +11,7 @@ private const val CALL_STACK_INDEX = 5
 
 /** A tree which logs important information for crash reporting.  */
 class CrashReportingTree : Timber.Tree() {
-    @SuppressWarnings("SpreadOperator")
+    @Suppress("SpreadOperator")
     override fun formatMessage(message: String, args: Array<Any>): String {
         return String.format(Locale.US, message, *args)
     }

@@ -10,7 +10,7 @@ import cz.helu.core.extension.instantiateFragment
 import cz.helu.core.ui.BaseUIScreen
 import timber.log.Timber
 
-@SuppressWarnings("VariableNaming")
+@Suppress("VariableNaming")
 abstract class BaseFragment : Fragment(), BaseUIScreen {
     abstract val logTag: String
 

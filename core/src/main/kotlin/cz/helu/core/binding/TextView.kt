@@ -66,7 +66,7 @@ fun TextView.setScrollableText(text: String? = null, delayMs: Long? = null) {
     }
 }
 
-@SuppressWarnings("ReturnCount")
+@Suppress("ReturnCount")
 private fun haveContentsChanged(str1: CharSequence?, str2: CharSequence?): Boolean {
     if (str1 == null != (str2 == null)) {
         return true
