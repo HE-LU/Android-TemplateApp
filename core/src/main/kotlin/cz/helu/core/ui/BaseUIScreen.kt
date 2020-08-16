@@ -10,7 +10,7 @@ import com.google.android.material.snackbar.Snackbar
 import cz.helu.core.arch.BaseActivity
 import cz.helu.core.arch.BaseView
 
-@SuppressWarnings("TooManyFunctions", "LongParameterList")
+@Suppress("TooManyFunctions", "LongParameterList")
 interface BaseUIScreen : BaseView {
     val baseActivity: BaseActivity
     val currentFragmentManager: FragmentManager

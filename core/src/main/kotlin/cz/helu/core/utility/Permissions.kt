@@ -9,7 +9,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 
-@SuppressWarnings("TooManyFunctions")
+@Suppress("TooManyFunctions")
 abstract class PermissionManager {
     private var lastRequestId = 0
     private val permissionRequests = HashMap<Int, PermissionRequest>()

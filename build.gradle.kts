@@ -1,3 +1,7 @@
+plugins {
+    id("io.gitlab.arturbosch.detekt") version Detekt.VERSION
+}
+
 buildscript {
     repositories {
         google()
@@ -18,5 +22,17 @@ allprojects {
     repositories {
         google()
         jcenter()
+    }
+}
+
+subprojects {
+    apply {
+        plugin("io.gitlab.arturbosch.detekt")
+    }
+
+    // Title: Detekt init
+    detekt {
+        config = files("${project.rootDir}/extras/detekt.yml")
+        parallel = true
     }
 }

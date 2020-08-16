@@ -8,7 +8,7 @@ import com.google.android.material.snackbar.Snackbar
 import cz.helu.core.extension.instantiateFragment
 import cz.helu.core.ui.BaseUIScreen
 
-@SuppressWarnings("VariableNaming")
+@Suppress("VariableNaming")
 abstract class BaseFragment : Fragment(), BaseUIScreen {
 
     override val baseActivity: BaseActivity
