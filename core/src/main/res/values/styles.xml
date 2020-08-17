@@ -7,15 +7,15 @@
 
     <!-- Title: Toolbar -->
     <style name="Widget.TemplateApp.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
-        <item name="android:background">@color/color_background</item>
+        <item name="android:background">@color/white</item>
         <item name="titleTextAppearance">@style/TextAppearance.TemplateApp.Toolbar</item>
-        <item name="titleTextColor">?colorOnBackground</item>
+        <item name="titleTextColor">?attr/colorOnBackground</item>
     </style>
 
     <style name="Widget.TemplateApp.Toolbar.Transparent">
         <item name="android:backgroundTint">@android:color/transparent</item>
         <item name="titleTextAppearance">@style/TextAppearance.TemplateApp.Toolbar</item>
-        <item name="titleTextColor">?colorOnBackground</item>
+        <item name="titleTextColor">?attr/colorOnBackground</item>
         <item name="android:elevation">0dp</item>
     </style>
 
@@ -49,7 +49,7 @@
     </style>
 
     <style name="Widget.TemplateApp.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
-        <item name="rippleColor">?colorControlHighlight</item>
+        <item name="rippleColor">?attr/colorControlHighlight</item>
         <item name="android:paddingBottom">16dp</item>
         <item name="android:paddingTop">16dp</item>
         <item name="android:textStyle">bold</item>
@@ -57,7 +57,7 @@
     </style>
 
     <style name="Widget.TemplateApp.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="rippleColor">?colorControlHighlight</item>
+        <item name="rippleColor">?attr/colorControlHighlight</item>
         <item name="android:paddingBottom">16dp</item>
         <item name="android:paddingTop">16dp</item>
         <item name="materialButtonStyle">?materialButtonOutlinedStyle</item>
@@ -76,7 +76,7 @@
 
     <!-- Title: CarView -->
     <style name="Widget.TemplateApp.CardView" parent="Widget.MaterialComponents.CardView">
-        <item name="cardBackgroundColor">?colorSurface</item>
+        <item name="cardBackgroundColor">?attr/colorSurface</item>
         <item name="cardCornerRadius">12dp</item>
         <item name="cardElevation">1dp</item>
     </style>
@@ -84,13 +84,13 @@
     <!-- Title: Floating action button -->
     <style name="Widget.TemplateApp.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
         <item name="backgroundTint">?android:colorBackground</item>
-        <item name="tint">?colorPrimary</item>
-        <item name="rippleColor">@color/color_highlight</item>
+        <item name="tint">?attr/colorPrimary</item>
+        <item name="rippleColor">@color/black_alpha</item>
     </style>
 
     <!-- Title: TextInputLayout -->
     <style name="Widget.TemplateApp.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="boxBackgroundColor">@color/color_text_input_box_bg</item>
+        <item name="boxBackgroundColor">@color/white_100</item>
         <item name="boxStrokeWidth">1dp</item>
         <item name="boxStrokeWidthFocused">1dp</item>
         <item name="boxStrokeColor">@color/text_input_layout_stroke_tint_list</item>
@@ -99,19 +99,19 @@
 
     <!-- Title: Snackbar -->
     <style name="Widget.TemplateApp.Snackbar" parent="@style/Widget.MaterialComponents.Snackbar">
-        <item name="android:background">@color/color_snackbar_bg</item>
+        <item name="android:background">@color/black_400</item>
         <item name="actionTextColorAlpha">1.0</item>
     </style>
 
     <style name="Widget.TemplateApp.Snackbar.Button"
            parent="@style/Widget.MaterialComponents.Button.TextButton.Snackbar">
-        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Widget.TemplateApp.Snackbar.Text" parent="@style/Widget.MaterialComponents.Snackbar.TextView">
-        <item name="android:textColor">@color/color_snackbar_text</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:alpha">1.0</item>
         <item name="android:textStyle">bold</item>
         <item name="android:gravity">center_horizontal</item>
@@ -120,7 +120,7 @@
 
     <!-- Title: Dialog -->
     <style name="Widget.TemplateApp.Dialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
-        <item name="colorSurface">@color/color_surface</item>
+        <item name="colorSurface">@color/white</item>
         <item name="buttonBarPositiveButtonStyle">@style/Widget.TemplateApp.Dialog.Button.Positive</item>
         <item name="buttonBarNegativeButtonStyle">@style/Widget.TemplateApp.Dialog.Button.Negative</item>
         <item name="materialAlertDialogTitleTextStyle">@style/Widget.TemplateApp.Dialog.Title</item>
@@ -134,25 +134,25 @@
     </style>
 
     <style name="Widget.TemplateApp.Dialog.Title" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
-        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Widget.TemplateApp.Dialog.Body" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
-        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:textSize">16sp</item>
     </style>
 
     <style name="Widget.TemplateApp.Dialog.Button.Positive" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
-        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Widget.TemplateApp.Dialog.Button.Negative" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
-        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textStyle">bold</item>
@@ -164,8 +164,8 @@
         <item name="tabMaxWidth">0dp</item>
         <item name="tabGravity">center</item>
         <item name="tabIndicator">@null</item>
-        <item name="tabTextColor">@color/color_tab_text</item>
-        <item name="tabSelectedTextColor">?colorPrimary</item>
+        <item name="tabTextColor">@color/black_800</item>
+        <item name="tabSelectedTextColor">?attr/colorPrimary</item>
         <item name="tabTextAppearance">@style/TextAppearance.TemplateApp.Tab</item>
         <item name="tabRippleColor">@color/tab_bg_tint_list</item>
     </style>
@@ -181,7 +181,7 @@
         <item name="android:windowAnimationStyle">@style/Animation.TemplateApp.BottomSheet.Modal</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="bottomSheetStyle">@style/Widget.TemplateApp.BottomSheet.Modal</item>
-        <item name="android:navigationBarColor">@color/color_navigation_bar_bottom_sheet</item>
+        <item name="android:navigationBarColor">@color/white_200</item>
         <item name="android:navigationBarDividerColor"
               tools:ignore="NewApi">@android:color/transparent
         </item>
