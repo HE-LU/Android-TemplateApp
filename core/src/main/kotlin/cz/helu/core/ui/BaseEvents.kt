@@ -10,6 +10,3 @@ class ShowError(
     val action: (Pair<Int, () -> Unit>)? = null,
     val length: Int = Snackbar.LENGTH_LONG
 ) : Event()
-
-object Finish : Event()
-object HideKeyboard : Event()
