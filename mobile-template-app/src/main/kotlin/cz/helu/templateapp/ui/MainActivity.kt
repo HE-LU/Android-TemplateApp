@@ -11,6 +11,7 @@ import cz.helu.templateapp.R
 
 class MainActivity : BaseActivity(R.layout.activity_main) {
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Theme_TemplateApp)
         super.onCreate(savedInstanceState)
 
         setupNavigation()
