@@ -13,10 +13,6 @@ class DashboardFragment :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupToolbar()
-    }
-
-    private fun setupToolbar() {
-        toolbar?.title = getString(R.string.title_dashboard)
+        setupToolbar(R.string.title_dashboard)
     }
 }
