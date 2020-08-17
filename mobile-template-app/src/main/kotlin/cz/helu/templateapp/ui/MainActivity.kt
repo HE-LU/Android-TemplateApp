@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
 
     fun changeNavigationBarVisiblity(visible: Boolean) {
         if (visible)
-            navigationBar?.setVisibility(View.VISIBLE);
+            navigationBar?.setVisibility(View.VISIBLE)
         else
-            navigationBar?.setVisibility(View.GONE);
+            navigationBar?.setVisibility(View.GONE)
     }
 }
