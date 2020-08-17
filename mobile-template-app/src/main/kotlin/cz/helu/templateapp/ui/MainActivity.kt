@@ -1,27 +1,45 @@
 package cz.helu.templateapp.ui
 
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import cz.helu.core.arch.BaseActivity
 import cz.helu.templateapp.R
 
-class MainActivity : BaseActivity(R.layout.activity_main) {
+class MainActivity : AppCompatActivity() {
+    private val toolbar get() = findViewById<Toolbar?>(R.id.toolbar)
+    private val navigationBar get() = findViewById<BottomNavigationView?>(R.id.nav_view)
+    private val navigationHostView get() = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.Theme_TemplateApp)
         super.onCreate(savedInstanceState)
 
+        setContentView(R.layout.activity_main)
+        setSupportActionBar(toolbar)
         setupNavigation()
     }
 
-    private fun setupNavigation() {
-        val navView: BottomNavigationView = findViewById(R.id.nav_view)
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        val navController = navHostFragment.navController
+    fun changeToolbarVisiblity(visible: Boolean) {
+        if (visible)
+            supportActionBar?.show()
+        else
+            supportActionBar?.hide()
+    }
 
+    fun changeNavigationBarVisiblity(visible: Boolean) {
+        if (visible)
+            navigationBar?.setVisibility(View.VISIBLE);
+        else
+            navigationBar?.setVisibility(View.GONE);
+    }
+
+    private fun setupNavigation() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
@@ -33,7 +51,7 @@ class MainActivity : BaseActivity(R.layout.activity_main) {
             )
         )
 
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        setupActionBarWithNavController(navigationHostView.navController, appBarConfiguration)
+        navigationBar?.setupWithNavController(navigationHostView.navController)
     }
 }
