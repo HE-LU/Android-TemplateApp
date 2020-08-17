@@ -9,20 +9,20 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import cz.helu.templateapp.R
 
 class MainActivity : AppCompatActivity() {
-    private val navigationBar get() = findViewById<BottomNavigationView?>(R.id.nav_view)
+    private val navigationBar: BottomNavigationView get() = findViewById(R.id.nav_view)
     private val navigationHostView get() = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
-        navigationBar?.setupWithNavController(navigationHostView.navController)
+        navigationBar.setupWithNavController(navigationHostView.navController)
     }
 
     fun changeNavigationBarVisiblity(visible: Boolean) {
         if (visible)
-            navigationBar?.setVisibility(View.VISIBLE)
+            navigationBar.setVisibility(View.VISIBLE)
         else
-            navigationBar?.setVisibility(View.GONE)
+            navigationBar.setVisibility(View.GONE)
     }
 }
