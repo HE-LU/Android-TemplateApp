@@ -34,8 +34,6 @@ interface ViewModelBinder<V : BaseViewModel, B : ViewDataBinding> : LifecycleOwn
 
     @CallSuper
     fun observeBaseEvents() {
-        observeEvent<HideKeyboard> { baseActivity.hideKeyboard() }
-        observeEvent<Finish> { finish() }
         observeShowEvents(binding.root)
     }
 
