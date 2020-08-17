@@ -1,11 +1,12 @@
 package cz.helu.core.arch
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import androidx.fragment.app.DialogFragment
 import cz.helu.core.ui.SnackbarScreen
 import cz.helu.core.ui.SnackbarScreenDelegate
 
-abstract class BaseFragment : Fragment(), SnackbarScreenDelegate by SnackbarScreen() {
+@Suppress("VariableNaming")
+abstract class BaseDialogFragment : DialogFragment(), SnackbarScreenDelegate by SnackbarScreen() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

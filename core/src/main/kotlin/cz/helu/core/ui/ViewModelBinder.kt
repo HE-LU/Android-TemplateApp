@@ -1,57 +1,55 @@
 package cz.helu.core.ui
 
+import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import androidx.annotation.CallSuper
 import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
+import com.google.android.material.snackbar.Snackbar
 import cz.helu.core.BR
 import cz.helu.core.arch.BaseViewModel
-import cz.helu.core.extension.hideKeyboard
 import cz.helu.core.liveevent.Event
 
-interface ViewModelBinder<V : BaseViewModel, B : ViewDataBinding> : LifecycleOwner, BaseUIScreen {
+interface ViewModelBinder<V : BaseViewModel, B : ViewDataBinding> : LifecycleOwner {
     val binding: B
     val viewModel: V
 
     fun getViewLifecycleOwner(): LifecycleOwner
+    fun requireContext(): Context
 
     fun observe()
 
-    fun setupBinding(layoutInflater: LayoutInflater, @LayoutRes layoutResId: Int): B {
-        val resultBinding: B = DataBindingUtil.inflate(layoutInflater, layoutResId, null, false)
-
-        resultBinding.apply {
+    fun setupBinding(layoutInflater: LayoutInflater, @LayoutRes layoutResId: Int): B =
+        DataBindingUtil.inflate<B>(layoutInflater, layoutResId, null, false).apply {
             lifecycleOwner = getViewLifecycleOwner()
             setVariable(BR.viewModel, viewModel)
         }
 
-        return resultBinding
-    }
-
     @CallSuper
     fun observeBaseEvents() {
-        observeShowEvents(binding.root)
+        observeShowEvents()
     }
 
-    /**
-     * Specified this way, so that children may override which view will be used to show the snackbar
-     * @param view to show snackbar
-     */
-    fun observeShowEvents(view: View) {
+    fun showEvent(
+        message: String,
+        length: Int,
+        config: (Snackbar.() -> Unit)
+    )
+
+    fun observeShowEvents() {
         observeEvent<ShowError> { errorEvent ->
             val message = when {
                 errorEvent.message != null -> errorEvent.message
-                errorEvent.messageResId != null -> view.context.getString(errorEvent.messageResId)
+                errorEvent.messageResId != null -> requireContext().getString(errorEvent.messageResId)
                 else -> throw IllegalArgumentException("One of 'message' or 'messageResId is required!")
             }
 
-            showSnackbar(view, message, errorEvent.length) {
+            showEvent(message, errorEvent.length) {
                 errorEvent.action?.let { (actionName, action) ->
-                    this@showSnackbar.setAction(actionName) { action(); lastSnackbar = null }
+                    setAction(actionName) { action() }
                 }
             }
         }
