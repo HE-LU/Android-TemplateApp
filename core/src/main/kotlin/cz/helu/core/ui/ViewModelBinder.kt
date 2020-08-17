@@ -12,6 +12,7 @@ import com.google.android.material.snackbar.Snackbar
 import cz.helu.core.BR
 import cz.helu.core.arch.BaseViewModel
 import cz.helu.core.liveevent.Event
+import cz.helu.core.liveevent.ShowError
 
 interface ViewModelBinder<V : BaseViewModel, B : ViewDataBinding> : LifecycleOwner {
     val binding: B

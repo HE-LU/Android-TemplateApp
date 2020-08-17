@@ -1,8 +1,7 @@
-package cz.helu.core.ui
+package cz.helu.core.liveevent
 
 import androidx.annotation.StringRes
 import com.google.android.material.snackbar.Snackbar
-import cz.helu.core.liveevent.Event
 
 class ShowError(
     val message: String? = null,

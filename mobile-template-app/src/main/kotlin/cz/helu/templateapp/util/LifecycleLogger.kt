@@ -65,12 +65,21 @@ class FragmentLifecycleLoggerCallbacks(
         logger(f.javaClass.simpleName, "onCreate")
     }
 
-    override fun onFragmentViewCreated(fm: FragmentManager, f: Fragment, v: View, savedInstanceState: Bundle?) {
+    override fun onFragmentViewCreated(
+        fm: FragmentManager,
+        f: Fragment,
+        v: View,
+        savedInstanceState: Bundle?
+    ) {
         super.onFragmentViewCreated(fm, f, v, savedInstanceState)
         logger(f.javaClass.simpleName, "onCreateView")
     }
 
-    override fun onFragmentActivityCreated(fm: FragmentManager, f: Fragment, savedInstanceState: Bundle?) {
+    override fun onFragmentActivityCreated(
+        fm: FragmentManager,
+        f: Fragment,
+        savedInstanceState: Bundle?
+    ) {
         super.onFragmentActivityCreated(fm, f, savedInstanceState)
         logger(f.javaClass.simpleName, "onActivityCreated")
     }

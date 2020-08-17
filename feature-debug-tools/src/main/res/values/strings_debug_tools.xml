@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <string name="title_debug_tools">Debug Tools</string>
 </resources>
