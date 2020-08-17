@@ -12,8 +12,4 @@ class ShowError(
 ) : Event()
 
 object Finish : Event()
-
-object ShowProgress : Event()
-object HideProgress : Event()
-
 object HideKeyboard : Event()

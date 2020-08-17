@@ -8,8 +8,6 @@ import androidx.annotation.LayoutRes
 import androidx.annotation.MenuRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.FragmentManager
 import com.google.android.material.snackbar.Snackbar
 import cz.helu.core.R
 import cz.helu.core.extension.doOnApplyWindowInsets
@@ -22,7 +20,6 @@ abstract class BaseActivity(
     @LayoutRes internal val layoutResId: Int
 ) : AppCompatActivity(), BaseUIScreen {
     override val baseActivity: BaseActivity get() = this
-    override val currentFragmentManager: FragmentManager get() = supportFragmentManager
     override var lastSnackbar: Snackbar? = null
 
     var latestSystemWindowInsetLeft = 0
@@ -65,20 +62,6 @@ abstract class BaseActivity(
 
     fun showToolbarMenu(@MenuRes resource: Int, action: Menu.() -> Unit) {
         toolbar?.menu(resource, action)
-    }
-
-    fun showDialog(tag: String, dialog: () -> DialogFragment) {
-        // Remove this dialog if exists
-        removeDialog(tag)
-
-        // Show dialog
-        dialog().show(supportFragmentManager, tag)
-    }
-
-    fun removeDialog(tag: String) {
-        supportFragmentManager.findFragmentByTag(tag)?.run {
-            supportFragmentManager.beginTransaction().remove(this).commitAllowingStateLoss()
-        }
     }
 
     fun openUrl(url: String) = startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))

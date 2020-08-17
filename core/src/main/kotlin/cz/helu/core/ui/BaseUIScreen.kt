@@ -13,7 +13,6 @@ import cz.helu.core.arch.BaseView
 @Suppress("TooManyFunctions", "LongParameterList")
 interface BaseUIScreen : BaseView {
     val baseActivity: BaseActivity
-    val currentFragmentManager: FragmentManager
     var lastSnackbar: Snackbar?
 
     fun getResources(): Resources

@@ -5,6 +5,7 @@ import android.graphics.Rect
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import cz.helu.core.utility.fromDpToPx
@@ -37,3 +38,17 @@ fun Activity.hideKeyboard() {
 
 fun <T> AppCompatActivity.observe(liveData: LiveData<T>, observer: (T) -> Unit) =
     liveData.observe(this, Observer(observer))
+
+fun AppCompatActivity.showDialog(tag: String, dialog: () -> DialogFragment) {
+    // Remove this dialog if exists
+    removeDialog(tag)
+
+    // Show dialog
+    dialog().show(supportFragmentManager, tag)
+}
+
+fun AppCompatActivity.removeDialog(tag: String) {
+    supportFragmentManager.findFragmentByTag(tag)?.run {
+        supportFragmentManager.beginTransaction().remove(this).commitAllowingStateLoss()
+    }
+}
