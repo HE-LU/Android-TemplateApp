@@ -10,8 +10,8 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import cz.helu.core.BR
 import cz.helu.core.arch.BaseViewModel
-import cz.helu.core.extension.hideKeyboard
 import cz.helu.core.liveevent.Event
+import cz.helu.core.liveevent.ShowError
 
 interface ViewModelBinder<V : BaseViewModel, B : ViewDataBinding> : LifecycleOwner, BaseUIScreen {
     val binding: B

@@ -10,7 +10,6 @@ import timber.log.Timber
 
 @HiltAndroidApp
 class TemplateAppApplication : Application() {
-
     override fun onCreate() {
         super.onCreate()
 
@@ -36,8 +35,10 @@ class TemplateAppApplication : Application() {
     }
 
     private fun registerLifecycleTracking() {
-        registerActivityLifecycleCallbacks(ActivityLifecycleLoggerCallbacks { tag, method ->
-            Timber.tag(tag).v(method)
-        })
+        registerActivityLifecycleCallbacks(
+            ActivityLifecycleLoggerCallbacks { tag, method ->
+                Timber.tag(tag).v(method)
+            }
+        )
     }
 }
