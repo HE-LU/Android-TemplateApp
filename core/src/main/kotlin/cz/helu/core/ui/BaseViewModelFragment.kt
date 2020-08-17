@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.databinding.ViewDataBinding
+import com.google.android.material.snackbar.Snackbar
 import cz.helu.core.ui.ViewModelBinder
 
 abstract class BaseViewModelFragment<V : BaseViewModel, B : ViewDataBinding>(
@@ -36,6 +37,10 @@ abstract class BaseViewModelFragment<V : BaseViewModel, B : ViewDataBinding>(
     override fun onDestroyView() {
         _binding = null
         super.onDestroyView()
+    }
+
+    override fun showEvent(message: String, length: Int, config: Snackbar.() -> Unit) {
+        showSnackbar(binding.root, message, length, null, config)
     }
 
     override fun observe() {}
