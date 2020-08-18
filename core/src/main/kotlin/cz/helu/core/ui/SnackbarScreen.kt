@@ -60,4 +60,3 @@ class SnackbarScreen : SnackbarScreenDelegate {
         lastSnackbar = null
     }
 }
-
