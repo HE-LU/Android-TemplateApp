@@ -151,7 +151,7 @@ class CommonBinaryPlugin : Plugin<Project> {
             "implementation"(Kotlin.CORUTINES_ANDROID)
 
             // Title: Navigation
-            "implementation"(AndroidX.NAVIGATION_FRAMGMET)
+            "implementation"(AndroidX.NAVIGATION_FRAGMENT)
             "implementation"(AndroidX.NAVIGATION_UI)
 
             // Title: Others
