@@ -158,7 +158,7 @@ private fun setupGlideRequestListener(
 
             if (withErrorBackground) {
                 val shape = GradientDrawable().apply {
-                    setColor(ContextCompat.getColor(imageView.context, R.color.color_primary))
+//                    setColor(ContextCompat.getColor(imageView.context, R.color.color_primary))
                 }
                 if (roundedCorners != null) {
                     shape.cornerRadius = roundedCorners

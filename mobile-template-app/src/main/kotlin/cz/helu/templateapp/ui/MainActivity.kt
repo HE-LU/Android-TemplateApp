@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     private val navigationHostView get() = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Theme_TemplateApp)
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
